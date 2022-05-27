@@ -1,34 +1,58 @@
 .viewport__viewport {
-    max-width: 1440px;
-    margin: 0 auto;
-    overflow: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .viewport__header {
-    height: 191px;
-    display: flex;
-    align-items: center;
+  height: 191px;
+  display: flex;
+  align-items: center;
 }
 
 .viewport__header-buttons {
-    display: flex;
-    justify-content: space-around;
-    width: 126px;
+  display: flex;
+  justify-content: space-around;
+  width: 126px;
 }
 
 .viewport__sections {
-    display: flex;
+  display: flex;
 }
 
 .viewport__aside {
-    width: 234px;
-    display: flex;
-    flex-direction: column;
+  width: 234px;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewport__link {
+  margin: 20px 0;
+  color: #19120c;
+  opacity: 40%;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+  color: black;
+  opacity: 100%;
+}
+
+a:active {
+  text-decoration: none;
 }
 
 .viewport__content {
-    background-color: #ebeff3;
-    border-radius: 10px 10px 0 0;
-    width: 1166px;
-    height: 889px;
+  background-color: #ebeff3;
+  border-radius: 10px 10px 0 0;
+  width: 1166px;
+  height: 889px;
 }

@@ -20,15 +20,15 @@ export const Viewport = () => {
       </div>
       <div className="viewport__sections">
         <div className="viewport__aside">
-          <Link to="/">Главная</Link>
-          <Link to="/compendium">Справочник</Link>
-          <Link to="/about">О проекте</Link>
+          <Link className="viewport__link" to="/">Главная</Link>
+          <Link className="viewport__link" to="/compendium">Справочник</Link>
+          {/* <Link to="/about">О проекте</Link> */}
         </div>
         <div className="viewport__content">
           <Routes>
             <Route path="/" element={<MainPage />}></Route>
             <Route path="/compendium" element={<Compendium />}></Route>
-            <Route path="/about" element={<div>about</div>}></Route>
+            {/* <Route path="/about" element={<div>about</div>}></Route> */}
           </Routes>
         </div>
       </div>

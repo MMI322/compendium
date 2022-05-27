@@ -79,10 +79,134 @@ export const MainPage = () => {
             {searchRes.length > 0 &&
               searchRes.map((i) => {
                 return (
-                  <div key={i.brand} className="main__container-search-result-card">
-                    <div>{i.brand}</div>
-                    <div>{i.brand}</div>
-                    <div>{i.brand}</div>
+                  <div
+                    key={i.brand}
+                    className="main__container-search-result-card"
+                  >
+                    <div className="main__container-search-result-card-data">
+                      <div style={{ fontSize: 16 }}>Марка: </div>
+                      <input
+                        type="text"
+                        value={i.brand}
+                        style={{
+                          width: 204,
+                          height: 36,
+                          border: "2px solid #E1E7EE",
+                          borderRadius: "5px",
+                          fontSize: 16,
+                        }}
+                      />
+                    </div>
+                    <div className="main__container-search-result-card-data">
+                      <div style={{ fontSize: 16 }}>Проба: </div>
+                      <input
+                        type="text"
+                        value={i.probe}
+                        style={{
+                          width: 204,
+                          height: 36,
+                          border: "2px solid #E1E7EE",
+                          borderRadius: "5px",
+                          fontSize: 16,
+                        }}
+                      />
+                    </div>
+                    <div className="main__container-search-result-card-data">
+                      <div style={{ fontSize: 16 }}>Золото: </div>
+                      <input
+                        type="text"
+                        value={i.percentage.gold}
+                        style={{
+                          width: 204,
+                          height: 36,
+                          border: "2px solid #E1E7EE",
+                          borderRadius: "5px",
+                          fontSize: 16,
+                        }}
+                      />
+                    </div>
+                    <div className="main__container-search-result-card-data">
+                      <div style={{ fontSize: 16 }}>Серебро: </div>
+                      <input
+                        type="text"
+                        value={i.percentage.silver ? i.percentage.silver : "-"}
+                        style={{
+                          width: 204,
+                          height: 36,
+                          border: "2px solid #E1E7EE",
+                          borderRadius: "5px",
+                          fontSize: 16,
+                        }}
+                      />
+                    </div>
+                    <div className="main__container-search-result-card-data">
+                      <div style={{ fontSize: 16 }}>Медь: </div>
+                      <input
+                        type="text"
+                        value={i.percentage.copper ? i.percentage.copper : "-"}
+                        style={{
+                          width: 204,
+                          height: 36,
+                          border: "2px solid #E1E7EE",
+                          borderRadius: "5px",
+                          fontSize: 16,
+                        }}
+                      />
+                    </div>
+                    <div className="main__container-search-result-card-data">
+                      <div style={{ fontSize: 16 }}>Платина: </div>
+                      <input
+                        type="text"
+                        value={i.percentage.platinum ? i.percentage.platinum : "-"}
+                        style={{
+                          width: 204,
+                          height: 36,
+                          border: "2px solid #E1E7EE",
+                          borderRadius: "5px",
+                          fontSize: 16,
+                        }}
+                      />
+                    </div>
+                    <div className="main__container-search-result-card-data">
+                      <div style={{ fontSize: 16 }}>Никель: </div>
+                      <input
+                        type="text"
+                        value={i.percentage.nickel ? i.percentage.nickel : "-"}
+                        style={{
+                          width: 204,
+                          height: 36,
+                          border: "2px solid #E1E7EE",
+                          borderRadius: "5px",
+                          fontSize: 16,
+                        }}
+                      />
+                    </div><div className="main__container-search-result-card-data">
+                      <div style={{ fontSize: 16 }}>Цинк: </div>
+                      <input
+                        type="text"
+                        value={i.percentage.zinc ? i.percentage.zinc : "-"}
+                        style={{
+                          width: 204,
+                          height: 36,
+                          border: "2px solid #E1E7EE",
+                          borderRadius: "5px",
+                          fontSize: 16,
+                        }}
+                      />
+                    </div><div className="main__container-search-result-card-data">
+                      <div style={{ fontSize: 16 }}>Кадмий: </div>
+                      <input
+                        type="text"
+                        value={i.percentage.cadmium ? i.percentage.cadmium : "-"}
+                        style={{
+                          width: 204,
+                          height: 36,
+                          border: "2px solid #E1E7EE",
+                          borderRadius: "5px",
+                          fontSize: 16,
+                        }}
+                      />
+                    </div>
                   </div>
                 );
               })}
