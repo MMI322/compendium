@@ -1,0 +1,33 @@
+ <p>Compendium</p>
+       <div data-tip data-for="tooltip" ref={ref}>
+         <img
+           src="assets/triangle.jpg"
+         alt="triangle"
+           onClick={() => {
+             if (rect) {
+              setMousePos({ x: rect.x - rect.x, y: rect.y - rect.top });
+             }
+         }}
+        />
+      </div>
+
+      <ReactTooltip
+        id="tooltip"
+        effect="float"
+        backgroundColor="#ffffff"
+      ></ReactTooltip>
+      
+const ref = useRef<HTMLDivElement | null>(null);
+
+  const rect = ref.current?.getBoundingClientRect();
+
+  const [mousePos, setMousePos] = useState<{ x: number; y: number }>({
+    x: 0,
+    y: 0,
+  });
+
+  if (rect) {
+    setMousePos({ x: rect.x - rect.x, y: rect.y - rect.top });
+  }
+
+  console.log(mousePos);

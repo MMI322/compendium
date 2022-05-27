@@ -1,0 +1,45 @@
+.main__container {
+  margin: 72px 57px;
+  max-width: 1052px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main__container-diagram {
+  margin-right: 33px;
+  border-radius: 10px;
+}
+
+.main__container-diagram-image {
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.main__container-search {
+  display: flex;
+  flex-direction: column;
+}
+
+.main__container-search-field {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 101px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+/* .main__container-search-result {
+  height: 574px;
+  background-color: #fff;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+.main__container-search-result-inner:-webkit-scrollbar {
+  display: none;
+}
+
+.main__container-search-result-inner {
+  overflow: hidden;
+} */

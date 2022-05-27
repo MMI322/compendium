@@ -1,0 +1,15 @@
+.tooltip {
+    opacity: 1 !important;
+}
+
+.tooltipWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background: #FFFFFF;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+    border-radius: 5px;
+    padding: 12px;
+}
