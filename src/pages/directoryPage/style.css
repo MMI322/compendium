@@ -1,0 +1,32 @@
+.compendium__table-item {
+  display: grid;
+  height: 70px;
+  grid-template-columns: 1fr 100px 1fr 100px 100px;
+  margin: 0 50px;
+  align-items: center;
+  font-size: 18px;
+}
+
+.compendium__table-item:not(:first-child) {
+  border-top: 1.6px solid #ebeff3;
+}
+
+.compendium__table-container {
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 70px 60px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.compendium__table-container::-webkit-scrollbar {
+  display: none;
+}
+
+.compendium__table-inner-container {
+  overflow: hidden;
+}
+
+.compendium__table-item-item {
+  font-size: 18px;
+}
