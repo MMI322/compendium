@@ -1,8 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap");
 
-*, *::after, *::before {
-  font-family: 'Inter', sans-serif;
+*,
+*::after,
+*::before {
+  font-family: "Inter", sans-serif;
   font-size: 24px;
+  color: #032041;
+}
+
+.linkable-item:hover {
+  color: #fc9b41;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+body {
+  background-color: #fafafa;
 }
 
 .App {
@@ -19,9 +32,8 @@
 }
 
 .card {
-  background: #FFFFFF;
-  box-shadow: 0 1px 5px rgba(0, 0, 0, .1);
+  background: #ffffff;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
   padding: 12px;
 }
-

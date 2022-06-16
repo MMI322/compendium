@@ -49,3 +49,29 @@ export const Input: React.FC<InputProps> = (x) => {
     </div>
   );
 };
+
+type ReadonlyInputProps = {
+  defaultValue?: string;
+  inputName?: string;
+};
+
+export const ReadonlyInput: React.FC<ReadonlyInputProps> = (x) => {
+  return (
+    <div className="readonly-input__outside">
+      <div style={{ fontSize: 16 }}>{x.inputName}</div>
+      <input
+        readOnly
+        type="text"
+        defaultValue={x.defaultValue || "Не найдено"}
+        style={{
+          width: 204,
+          height: 36,
+          border: "2px solid #E1E7EE",
+          borderRadius: "5px",
+          fontSize: 16,
+          padding: "0px 17px"
+        }}
+      />
+    </div>
+  );
+};

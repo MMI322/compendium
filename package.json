@@ -3,25 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@react-three/drei": "^9.11.0",
-    "@react-three/fiber": "^8.0.17",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.0.1",
     "@types/node": "^16.7.13",
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@types/react-router-dom": "^5.3.3",
-    "@types/three": "^0.140.0",
     "effector": "^22.3.0",
     "effector-react": "^22.0.6",
+    "plotly.js": "^2.12.1",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
+    "react-plotly.js": "^2.5.1",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-tooltip": "^4.2.21",
-    "three": "^0.140.2",
     "typescript": "^4.4.2",
     "web-vitals": "^2.1.0"
   },
@@ -33,8 +30,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -48,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/plotly.js": "^1.54.22",
+    "@types/react-plotly.js": "^2.5.1"
   }
 }

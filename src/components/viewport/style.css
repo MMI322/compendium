@@ -1,19 +1,28 @@
 .viewport__viewport {
-  max-width: 1440px;
+  max-width: 1320px;
   margin: 0 auto;
   overflow: hidden;
 }
 
 .viewport__header {
-  height: 191px;
+  height: 118px;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  border-bottom: 3px solid #E0E7EE;
+  padding-bottom: 24px;
 }
 
 .viewport__header-buttons {
   display: flex;
   justify-content: space-around;
   width: 126px;
+}
+
+.viewport__header-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-left: 200px;
 }
 
 .viewport__sections {
@@ -27,7 +36,6 @@
 }
 
 .viewport__link {
-  margin: 20px 0;
   color: #19120c;
   opacity: 40%;
 }
@@ -42,17 +50,19 @@ a:visited {
 
 a:hover {
   text-decoration: none;
-  color: black;
+  color: #032041;
   opacity: 100%;
 }
 
 a:active {
   text-decoration: none;
+  color: #032041;
 }
 
 .viewport__content {
-  background-color: #ebeff3;
-  border-radius: 10px 10px 0 0;
-  width: 1166px;
-  height: 889px;
+  /* background-color: #ebeff3; */
+  /* border-radius: 10px 10px 0 0; */
+  max-width: 1320px;
+  height: 835px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
 }

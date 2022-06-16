@@ -1,16 +1,36 @@
+import { useStore } from "effector-react";
 import React from "react";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { Compendium } from "../../pages/directoryPage/compendium";
+import { AboutPage } from "../../pages/aboutPage/aboutPage";
+import { BrandPage } from "../../pages/directoryPage/brandPage/brandPage";
+import { Compendium } from "../../pages/directoryPage/directory/compendium";
+import { DirectoryViewport } from "../../pages/directoryPage/viewport/directoryViewport";
 import { MainPage } from "../../pages/mainPage/Main";
-import { HeaderLogo } from "../headerLogo/headerLogo";
+import { elemPageStore } from "../../stores/elemPage.store";
 import "./style.css";
 
 export const Viewport = () => {
+  const data = useStore(elemPageStore);
+
   return (
     <div className="viewport__viewport">
       <div className="viewport__header">
-        <HeaderLogo />
-        <div style={{ width: "100%" }}></div>
+        <div className="viewport__header-logo">
+          <Link to="/">
+            <img src="assets/logo.svg" alt="logo" />
+          </Link>
+        </div>
+        <div className="viewport__header-links">
+          <Link className="viewport__link" to="/">
+            Главная
+          </Link>
+          <Link className="viewport__link" to="/compendium">
+            Справочник
+          </Link>
+          <Link className="viewport__link" to="/about">
+            О проекте
+          </Link>
+        </div>
         <div className="viewport__header-buttons">
           <div>RU</div>
           <div style={{ width: 32, height: 32 }}>
@@ -18,19 +38,18 @@ export const Viewport = () => {
           </div>
         </div>
       </div>
-      <div className="viewport__sections">
-        <div className="viewport__aside">
-          <Link className="viewport__link" to="/">Главная</Link>
-          <Link className="viewport__link" to="/compendium">Справочник</Link>
-          {/* <Link to="/about">О проекте</Link> */}
-        </div>
-        <div className="viewport__content">
-          <Routes>
-            <Route path="/" element={<MainPage />}></Route>
-            <Route path="/compendium" element={<Compendium />}></Route>
-            {/* <Route path="/about" element={<div>about</div>}></Route> */}
-          </Routes>
-        </div>
+      <div className="viewport__content">
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          <Route path="/compendium" element={<DirectoryViewport />}>
+            <Route index element={<Compendium />} />
+            <Route
+              path={`/compendium/${data.numberName}`}
+              element={<BrandPage data={data}/>}
+            />
+          </Route>
+          <Route path="/about" element={<AboutPage />} />
+        </Routes>
       </div>
     </div>
   );

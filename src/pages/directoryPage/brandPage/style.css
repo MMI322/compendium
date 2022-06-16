@@ -1,0 +1,28 @@
+.brand-page__viewport {
+  background-color: #fff;
+  border-radius: 5px;
+  margin: 0 auto;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.brand-page__data-left {
+    max-width: 448px;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-page__container {
+    margin: 34px 60px;
+    height: 900px;
+}
+
+.brand-page__header {
+    display: flex;
+    align-items: center;
+}
+
+.brand-page__header-back-button {
+    display: flex;
+    font-size: 13px;
+}
