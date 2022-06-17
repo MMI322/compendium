@@ -1,5 +1,6 @@
 import { useStore } from "effector-react";
 import React from "react";
+import { NavLink } from "react-router-dom";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { AboutPage } from "../../pages/aboutPage/aboutPage";
 import { BrandPage } from "../../pages/directoryPage/brandPage/brandPage";
@@ -21,15 +22,30 @@ export const Viewport = () => {
           </Link>
         </div>
         <div className="viewport__header-links">
-          <Link className="viewport__link" to="/">
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "viewport__link-active" : "viewport__link"
+            }
+            to="/"
+          >
             Главная
-          </Link>
-          <Link className="viewport__link" to="/compendium">
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "viewport__link-active" : "viewport__link"
+            }
+            to="/compendium"
+          >
             Справочник
-          </Link>
-          <Link className="viewport__link" to="/about">
+          </NavLink>
+          <NavLink
+            className={({ isActive }) =>
+              isActive ? "viewport__link-active" : "viewport__link"
+            }
+            to="/about"
+          >
             О проекте
-          </Link>
+          </NavLink>
         </div>
         <div className="viewport__header-buttons">
           <div>RU</div>
@@ -45,7 +61,7 @@ export const Viewport = () => {
             <Route index element={<Compendium />} />
             <Route
               path={`/compendium/${data.numberName}`}
-              element={<BrandPage data={data}/>}
+              element={<BrandPage data={data} />}
             />
           </Route>
           <Route path="/about" element={<AboutPage />} />

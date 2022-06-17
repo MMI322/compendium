@@ -1,20 +1,16 @@
 .input-inner {
-  width: 63px;
-  height: 35px;
-  border: 2px #000 solid;
-  font-size: 14px;
-  border-radius: 5px;
+    height: 36px;
+    border-radius: 3px;
+    font-size: 16;
+    padding: 0px 17px;
+    background-color:#F9FAFC;
+    border: 2px solid #E1E7EE;
 }
 
 .readonly-input__outside {
-  margin: 10px 0;
+  margin: 5px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 80%;
   font-size: inherit;
-}
-
-.readonly-input__outside {
-    
 }

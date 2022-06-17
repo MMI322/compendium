@@ -23,12 +23,22 @@ export const BrandPage: React.FC<BrandPageProps> = ({ data }) => {
             Вернуться
           </div>
         </div>
-        <div>
-          Подробная информация по сплаву: <b>{data?.brand}</b>
+        <div style={{ margin: "25px auto" }}>
+          <div>
+            Подробная информация по сплаву: <b>{data?.brand}</b>
+          </div>
         </div>
       </div>
       <div className="brand-page__container">
         <div className="brand-page__data-left">
+          {!data?.imageSrc ? (
+            <div className="brand-page__data-left-no-image"></div>
+          ) : (
+            <div className="brand-page__data-left-image">
+              <img src={data?.imageSrc} alt={data?.imageSrc} />
+            </div>
+          )}
+
           <ReadonlyInput
             inputName="Золото"
             defaultValue={data?.percentage.gold}
@@ -46,7 +56,33 @@ export const BrandPage: React.FC<BrandPageProps> = ({ data }) => {
           />
           <ReadonlyInput inputName="Цвет" defaultValue={data?.color} />
         </div>
-        <div className="brand-page__data-right"></div>
+        <div className="brand-page__data-right">
+          <div className="brand-page__data-right-content">
+            ОПИСАНИЕ:
+            <br />
+            <br />
+            Сплав ЗлСрМ 375-20 применяется: для производства скользящих
+            контактов; ювелирных изделий (колец, сережек, перстней, медальонов,
+            кулонов, брошей, цепочек).
+          </div>
+          <br />
+          <div>
+            ПРИМЕЧАНИЕ:
+            <br />
+            <br />
+            Золото-серебряно-медный сплав. Сплав пригоден для всех видов
+            холодной обработки и литья. Изделия из сплава 375-й пробы относятся
+            к наиболее дешевым по ценам и относится к тускнеющим на воздухе, что
+            ограничивает его применение.
+          </div>
+          <br />
+          <div>
+            Технологические свойства:
+            <br />
+            <br />
+            Пригодны для всех видов холодной обработки и литья.
+          </div>
+        </div>
       </div>
     </div>
   );

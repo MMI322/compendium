@@ -1,7 +1,8 @@
 import { useStore } from "effector-react";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "../../components/button/button";
-import { Input } from "../../components/input/input";
+import { Input, ReadonlyInput } from "../../components/input/input";
 import { Triangle } from "../../components/triangle/triangle";
 import { compendiumData, goldBrand } from "../../data/compendium-data";
 import { searchStore } from "../../stores/search.store";
@@ -42,9 +43,9 @@ export const MainPage = () => {
           <Triangle />
         </div>
         <div className="main__container-search-field">
-          <Input placeholder="Au" type="gold" />
-          <Input placeholder="Ag" type="silver" />
-          <Input placeholder="Cu" type="copper" />
+          <Input placeholder="Au" type="gold" width="50px" />
+          <Input placeholder="Ag" type="silver" width="50px" />
+          <Input placeholder="Cu" type="copper" width="50px" />
           <Button onClick={() => handleSearchClick()} />
         </div>
         <div className="main__container-search-result">
@@ -58,45 +59,18 @@ export const MainPage = () => {
                   >
                     <div className="main__container-search-result-card-data">
                       <div style={{ fontSize: 16 }}>Марка: </div>
-                      <input
-                        type="text"
-                        defaultValue={i.brand}
-                        style={{
-                          width: 204,
-                          height: 36,
-                          border: "2px solid #E1E7EE",
-                          borderRadius: "5px",
-                          fontSize: 16,
-                        }}
-                      />
+                      <ReadonlyInput defaultValue={i.brand} />
                     </div>
                     <div className="main__container-search-result-card-data">
                       <div style={{ fontSize: 16 }}>Проба: </div>
-                      <input
-                        type="text"
-                        defaultValue={i.probe}
-                        style={{
-                          width: 204,
-                          height: 36,
-                          border: "2px solid #E1E7EE",
-                          borderRadius: "5px",
-                          fontSize: 16,
-                        }}
-                      />
+                      <ReadonlyInput defaultValue={i.probe} />
                     </div>
                     <div className="main__container-search-result-card-data">
                       <div style={{ fontSize: 16 }}>Расч. пл: </div>
-                      <input
-                        type="text"
-                        defaultValue={i.density}
-                        style={{
-                          width: 204,
-                          height: 36,
-                          border: "2px solid #E1E7EE",
-                          borderRadius: "5px",
-                          fontSize: 16,
-                        }}
-                      />
+                      <ReadonlyInput defaultValue={i.density} />
+                    </div>
+                    <div className="linkable-item main__container-search-result-card-data" style={{justifyContent: "flex-end", height: "50px"}}>
+                      <Link className="linkable-item" to={`/compendium/${i.numberName}`}>Подробнее</Link>
                     </div>
                   </div>
                 );
@@ -104,7 +78,11 @@ export const MainPage = () => {
             ) : (
               <div className="main__container-search-result-card">
                 <div className="main__container-search-result-card-data">
-                <div style={{ fontSize: 16 }}>Расч. пл: </div>
+                  <div style={{ height: "360px", display: "flex" }}>
+                    <div style={{ fontSize: 16, margin: "10px" }}>
+                      Для поиска введите состав сплава и нажмите кнопку "найти"
+                    </div>
+                  </div>
                 </div>
               </div>
             )}

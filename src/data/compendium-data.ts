@@ -14,6 +14,7 @@ export interface goldBrand {
     soft?: number;
   };
   color?: string;
+  imageSrc?: string;
 }
 
 export const compendiumData: goldBrand[] = [
@@ -33,6 +34,7 @@ export const compendiumData: goldBrand[] = [
       soft: 130,
     },
     color: "Ярко-желтый",
+    imageSrc: "/assets/375-20.png",
   },
   {
     brand: "ЗлСрМ 375-100",

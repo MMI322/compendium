@@ -6,6 +6,7 @@ import "./style.css";
 type InputProps = {
   placeholder?: string;
   type: "gold" | "silver" | "copper";
+  width?: string;
 };
 
 export const Input: React.FC<InputProps> = (x) => {
@@ -45,6 +46,7 @@ export const Input: React.FC<InputProps> = (x) => {
         type="text"
         placeholder={x.placeholder}
         onChange={handleSearchChange}
+        style={{ width: x.width }}
       />
     </div>
   );
@@ -62,14 +64,17 @@ export const ReadonlyInput: React.FC<ReadonlyInputProps> = (x) => {
       <input
         readOnly
         type="text"
-        defaultValue={x.defaultValue || "Не найдено"}
+        defaultValue={x.defaultValue || "Данные отсутствуют"}
         style={{
           width: 204,
           height: 36,
-          border: "2px solid #E1E7EE",
-          borderRadius: "5px",
+          borderRadius: "3px",
           fontSize: 16,
-          padding: "0px 17px"
+          padding: "0px 17px",
+          backgroundColor: "#F9FAFC",
+          borderWidth: "2px",
+          borderColor: "#E1E7EE",
+          borderStyle: "solid",
         }}
       />
     </div>

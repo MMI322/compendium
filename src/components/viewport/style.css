@@ -40,6 +40,10 @@
   opacity: 40%;
 }
 
+.viewport__link-active {
+  color: #032041;
+}
+
 a:link {
   text-decoration: none;
 }
@@ -54,14 +58,12 @@ a:hover {
   opacity: 100%;
 }
 
-a:active {
+/* a:active {
   text-decoration: none;
   color: #032041;
-}
+} */
 
 .viewport__content {
-  /* background-color: #ebeff3; */
-  /* border-radius: 10px 10px 0 0; */
   max-width: 1320px;
   height: 835px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);

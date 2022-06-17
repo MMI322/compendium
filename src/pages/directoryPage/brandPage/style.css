@@ -7,22 +7,47 @@
 }
 
 .brand-page__data-left {
-    max-width: 448px;
-    display: flex;
-    flex-direction: column;
+  max-width: 448px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .brand-page__container {
-    margin: 34px 60px;
-    height: 900px;
+  margin: 10px 60px;
+  height: 900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .brand-page__header {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .brand-page__header-back-button {
-    display: flex;
-    font-size: 13px;
+  display: flex;
+  font-size: 13px;
+  margin-left: 55px;
+}
+
+.brand-page__data-left-no-image {
+  width: 450px;
+  height: 300px;
+  background-color: #e1e7ee;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.brand-page__data-left-image {
+  width: 450px;
+  height: 300px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.brand-page__data-right-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
