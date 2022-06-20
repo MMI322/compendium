@@ -8,10 +8,12 @@ import { Compendium } from "../../pages/directoryPage/directory/compendium";
 import { DirectoryViewport } from "../../pages/directoryPage/viewport/directoryViewport";
 import { MainPage } from "../../pages/mainPage/Main";
 import { elemPageStore } from "../../stores/elemPage.store";
+import { setThemeStore, themeStore } from "../../stores/theme.store";
 import "./style.css";
 
 export const Viewport = () => {
   const data = useStore(elemPageStore);
+  const isDark = useStore(themeStore);
 
   return (
     <div className="viewport__viewport">
@@ -49,8 +51,8 @@ export const Viewport = () => {
         </div>
         <div className="viewport__header-buttons">
           <div>RU</div>
-          <div style={{ width: 32, height: 32 }}>
-            <img src="assets/sun-icon.svg" alt="sun.svg" />
+          <div style={{ width: 32, height: 32 }} onClick={() => {isDark ? setThemeStore(false) : setThemeStore(true)}}>
+            <img src={ isDark ? "assets/moon-icon.svg" : "assets/sun-icon.svg"} alt="sun.svg" />
           </div>
         </div>
       </div>
