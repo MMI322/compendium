@@ -94,16 +94,16 @@ function Test() {
             xaxis: {color: "#ffffff"},
               scene: {
     xaxis: {
-     gridcolor: "rgb(255, 255, 255)",
-     zerolinecolor: "rgb(255, 255, 255)"
+     gridcolor: "#787878",
+     zerolinecolor: "#787878"
     },
     yaxis: {
-     gridcolor: "rgb(255, 255, 255)",
-     zerolinecolor: "rgb(255, 255, 255)"
+     gridcolor: "#787878",
+     zerolinecolor: "#787878"
     },
     zaxis: {
-     gridcolor: "rgb(255, 255, 255)",
-     zerolinecolor: "rgb(255, 255, 255)"
+     gridcolor: "#787878",
+     zerolinecolor: "#787878"
     }
   },
         // scene1: {
