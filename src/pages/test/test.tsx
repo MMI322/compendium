@@ -89,7 +89,7 @@ function Test() {
         height: 750,
         width: 720,
         title: "Au-Ag-Cu",
-        plot_bgcolor: "#222222",
+        plot_bgcolor: "#ffffff",
         paper_bgcolor: "#222222",
           font: { color: "#ffffff"}
         // scene1: {
