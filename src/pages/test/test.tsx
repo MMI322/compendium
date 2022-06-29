@@ -92,9 +92,7 @@ function Test() {
         plot_bgcolor: "#ffffff",
         paper_bgcolor: "#222222",
           font: { color: "#ffffff"},
-            xaxis: {color: "#ffffff"},
-yaxis: {color: "#ffffff"},
-zaxis: {color: "#ffffff"}
+            xaxis: {color: "#ffffff"}
         // scene1: {
         //   // camera: {
         //   //   center: { x: 0, y: 0, z: 0 },
