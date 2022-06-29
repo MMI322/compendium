@@ -89,10 +89,23 @@ function Test() {
         height: 750,
         width: 720,
         title: "Au-Ag-Cu",
-        plot_bgcolor: "#ffffff",
         paper_bgcolor: "#222222",
           font: { color: "#ffffff"},
-            xaxis: {color: "#ffffff"}
+            xaxis: {color: "#ffffff"},
+              scene: {
+    xaxis: {
+     gridcolor: "rgb(255, 255, 255)",
+     zerolinecolor: "rgb(255, 255, 255)"
+    },
+    yaxis: {
+     gridcolor: "rgb(255, 255, 255)",
+     zerolinecolor: "rgb(255, 255, 255)"
+    },
+    zaxis: {
+     gridcolor: "rgb(255, 255, 255)",
+     zerolinecolor: "rgb(255, 255, 255)"
+    }
+  },
         // scene1: {
         //   // camera: {
         //   //   center: { x: 0, y: 0, z: 0 },
