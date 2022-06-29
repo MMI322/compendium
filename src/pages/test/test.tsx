@@ -91,6 +91,7 @@ function Test() {
         title: "Au-Ag-Cu",
         plot_bgcolor: "#222222",
         paper_bgcolor: "#222222",
+          font: { color: "#ffffff"}
         // scene1: {
         //   // camera: {
         //   //   center: { x: 0, y: 0, z: 0 },
